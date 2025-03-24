@@ -1,0 +1,346 @@
+/**
+ * Estilos personalizados para DentalMEC
+ */
+
+:root {
+    --primary: #2867b2;
+    --primary-dark: #1e4f8a;
+    --secondary: #23b5d3;
+    --light: #f5f7fa;
+    --dark: #333;
+    --success: #28a745;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --processing: #6610f2;
+}
+
+body {
+    background-color: var(--light);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Barra lateral */
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    padding: 70px 0 0;
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+}
+
+.sidebar .nav-link {
+    color: #555;
+    padding: 0.75rem 1.25rem;
+    border-left: 3px solid transparent;
+}
+
+.sidebar .nav-link:hover {
+    color: var(--primary);
+    background-color: rgba(40, 103, 178, 0.05);
+}
+
+.sidebar .nav-link.active {
+    color: var(--primary);
+    background-color: rgba(40, 103, 178, 0.1);
+    border-left-color: var(--primary);
+}
+
+.sidebar .nav-link i {
+    width: 24px;
+}
+
+/* Contenedor principal */
+main {
+    flex: 1;
+}
+
+/* Estados de pedidos */
+.status-badge {
+    padding: 0.35em 0.65em;
+    border-radius: 0.25rem;
+    font-size: 0.85em;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.status-new {
+    background-color: #e2e3e5;
+    color: #383d41;
+}
+
+.status-pending {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.status-processing {
+    background-color: #cce5ff;
+    color: #004085;
+}
+
+.status-completed {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.status-rejected {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Tarjetas de estadísticas */
+.stat-card {
+    border-radius: 0.5rem;
+    border-left: 4px solid var(--primary);
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-title {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.stat-value {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.stat-info {
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+/* Dropzone para subida de archivos */
+.dropzone {
+    border: 2px dashed #ccc;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dropzone:hover, .dropzone.dragover {
+    border-color: var(--primary);
+    background-color: rgba(40, 103, 178, 0.05);
+}
+
+.dropzone .dropzone-icon {
+    font-size: 2.5rem;
+    color: #ccc;
+    margin-bottom: 1rem;
+}
+
+.dropzone .dropzone-text {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.dropzone .dropzone-hint {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+/* Timeline para historial de pedidos */
+.timeline {
+    position: relative;
+    margin-top: 1.5rem;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 1.5rem;
+}
+
+.timeline-item:not(:last-child)::before {
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 25px;
+    bottom: -25px;
+    width: 2px;
+    background-color: #e9ecef;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--primary);
+}
+
+.timeline-date {
+    font-size: 0.8rem;
+    color: #6c757d;
+    margin-bottom: 0.25rem;
+}
+
+.timeline-title {
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+.timeline-description {
+    font-size: 0.9rem;
+}
+
+/* Pasos del proceso */
+.process-steps {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.process-step {
+    flex: 1;
+    text-align: center;
+    position: relative;
+}
+
+.process-step::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    width: 100%;
+    height: 2px;
+    background-color: #e9ecef;
+    z-index: 1;
+}
+
+.process-step:last-child::after {
+    display: none;
+}
+
+.process-step-number {
+    position: relative;
+    z-index: 2;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #e9ecef;
+    color: #6c757d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    margin: 0 auto 0.5rem;
+}
+
+.process-step-title {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.process-step.active .process-step-number,
+.process-step.completed .process-step-number {
+    background-color: var(--primary);
+    color: white;
+}
+
+.process-step.active .process-step-title {
+    color: var(--primary);
+    font-weight: 500;
+}
+
+/* Tarjetas de selección */
+.selection-card {
+    border: 2px solid #e9ecef;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.selection-card:hover,
+.selection-card.selected {
+    border-color: var(--primary);
+    background-color: rgba(40, 103, 178, 0.05);
+}
+
+.selection-card .selection-icon {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.selection-card .selection-title {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.selection-card .selection-description {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+/* Comentarios */
+.comment {
+    margin-bottom: 1.5rem;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.comment-user {
+    font-weight: 500;
+}
+
+.comment-date {
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+.comment-content {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.comment.own-comment .comment-header {
+    flex-direction: row-reverse;
+}
+
+.comment.own-comment .comment-content {
+    background-color: #e6f2ff;
+    color: #004085;
+}
+
+/* Pie de página */
+footer {
+    margin-top: auto;
+}
+
+/* Responsive */
+@media (max-width: 767.98px) {
+    .sidebar {
+        position: static;
+        height: auto;
+        padding: 0;
+    }
+    
+    .process-step::after {
+        width: 50%;
+        left: 75%;
+    }
+    
+    .process-step:last-child::after {
+        display: none;
+    }
+}

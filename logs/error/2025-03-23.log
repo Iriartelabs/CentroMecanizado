@@ -1,0 +1,14 @@
+[2025-03-23 17:58:49] Error al obtener estadísticas de pedidos: SQLSTATE[HY093]: Invalid parameter number
+[2025-03-23 18:22:09] Error al obtener estadísticas de pedidos: SQLSTATE[HY093]: Invalid parameter number
+[2025-03-23 18:30:00] Error al obtener estadísticas de pedidos: SQLSTATE[HY093]: Invalid parameter number
+[2025-03-23 18:56:22] Error al obtener estadísticas de pedidos: SQLSTATE[HY093]: Invalid parameter number
+[2025-03-23 19:25:24] Error al obtener estadísticas de pedidos: SQLSTATE[HY093]: Invalid parameter number
+[2025-03-23 19:44:23] Error al obtener estadísticas de pedidos: SQLSTATE[HY093]: Invalid parameter number
+[2025-03-23 19:45:43] Error al obtener estadísticas de pedidos: SQLSTATE[HY093]: Invalid parameter number
+[2025-03-23 19:59:56] Error al crear pedido: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '20250323-0' for key 'reference_number'
+[2025-03-23 20:00:12] Error al crear pedido: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '20250323-0' for key 'reference_number'
+[2025-03-23 20:00:49] Error al crear pedido: SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '20250323-0' for key 'reference_number'
+[2025-03-23 20:32:23] Error al obtener estadísticas de pedidos: SQLSTATE[HY093]: Invalid parameter number
+[2025-03-23 20:32:53] Error al obtener estadísticas de pedidos: SQLSTATE[HY093]: Invalid parameter number
+[2025-03-23 20:44:50] Error al obtener estadísticas de pedidos: SQLSTATE[HY093]: Invalid parameter number
+[2025-03-23 20:44:53] Error al obtener estadísticas de pedidos: SQLSTATE[HY093]: Invalid parameter number
