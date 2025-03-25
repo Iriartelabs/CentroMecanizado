@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS users (
 CREATE TABLE IF NOT EXISTS orders (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
-    reference_number VARCHAR(10) NOT NULL UNIQUE,
+    reference_number VARCHAR(15) NOT NULL UNIQUE,
     process_type ENUM('milling', 'sintering', 'printing') NOT NULL,
     status ENUM('new', 'pending', 'processing', 'completed', 'rejected') NOT NULL DEFAULT 'new',
     material VARCHAR(50),
